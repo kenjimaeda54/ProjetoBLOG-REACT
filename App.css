@@ -1,0 +1,12 @@
+*{
+   margin: 0px;
+   padding: 0px;
+   outline: 0px;
+   box-sizing: border-box;
+}
+
+body{
+    background: white;
+    font: 14px sans-serif;
+    -webkit-font-smoothing:antialiased !important;
+}

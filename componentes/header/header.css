@@ -1,0 +1,24 @@
+header#header{
+    background: black;
+    height: 100px;
+}
+
+header#header .conteudoHeader{
+    display: flex;
+    width: 100%;
+    max-width: 900px;
+    justify-content: space-between;
+    flex-direction: row;
+    height: 100px;
+    margin: 0 auto;
+    padding: 0 30px;
+    align-items: center;
+}
+
+header#header a{
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 16px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
