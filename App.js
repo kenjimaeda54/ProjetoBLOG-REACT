@@ -3,10 +3,12 @@ import Firebase from './firebase';
 import {BrowserRouter,Route,Switch} from 'react-router-dom';
 
 import './App.css';
-import Home   from "./componentes/home";
-import Header from "./componentes/header";
-import Login  from "./componentes/login";
-import Admin  from "./componentes/admin";
+import Home     from "./componentes/home";
+import Header   from "./componentes/header";
+import Login    from "./componentes/login";
+import Admin    from "./componentes/admin";
+import Registro from "./componentes/registro";
+import Novo     from "./componentes/novo";
 
 export default class App extends Component{
  
@@ -26,9 +28,11 @@ export default class App extends Component{
               <BrowserRouter>
                 <Header/>
                 <Switch>
-                  <Route exact path="/" component={Home}/>
-                  <Route exact path="/login" component={Login}/>
-                  <Route exact path="/admin" component={Admin}/>
+                  <Route exact path="/"           component={Home}/>
+                  <Route exact path="/login"      component={Login}/>
+                  <Route exact path="/admin"      component={Admin}/>
+                  <Route exact path="/registro"   component={Registro}/>
+                  <Route exact path="/admin/novo" component={Novo}/>
                 </Switch>
               </BrowserRouter>
            </div>

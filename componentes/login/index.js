@@ -47,19 +47,21 @@ class Login extends Component{
      render(){
         return(
            <div>
-              <form onSubmit={this.logar} id="login">
+              <form onSubmit={this.logar} id="login"> 
               <label>Email</label><br/>   
               <input type="text" autoComplete="off" autoFocus value={this.state.email} 
               placeholder="Seu email:exemplo@gmail.com"
               onChange={(evento)=>{this.setState({email:evento.target.value})}}
               /><br/> 
+              
               <label>Senha</label><br/>   
               <input type="password" autoComplete="off" value={this.state.senha} 
                placeholder="Sua senha:"
                onChange={(evento)=>{this.setState({senha:evento.target.value})}}
               /><br/> 
+              
               <button type="submit">Login</button>
-              <Link to="/registro">Ainda não tem cadastro?</Link>
+              <Link to="/registro">Ainda não tem cadastro?</Link>  
               </form>
            </div>
         );

@@ -26,6 +26,7 @@ class Home extends Component{
                 descricao: filhoItem.val().descricao
               })
            }) 
+           estado.lista.reverse();
            this.setState(estado);
         })
     }
