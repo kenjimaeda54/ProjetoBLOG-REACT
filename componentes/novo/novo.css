@@ -1,0 +1,80 @@
+div#novo header{
+    width: 100%;
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+div#novo a{
+    display: flex;
+    background: #000000;
+    border: 1px solid #FFFAFA;
+    box-sizing: border-box;
+    border-radius: 7px;
+    width:100px;
+    height: 30px;
+    justify-content: center;
+    margin-left: 50px auto;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+
+
+form#admin{
+    width: 100%;
+    max-width: 900px;
+    background: #C4C4C4;
+    margin: 30px auto;
+    padding: 30px;
+    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+}
+
+form#admin span{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: red;
+    justify-content: center;
+}
+
+form#admin input[type=text]{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 7px;
+    background: #FFF7F7;
+    border: 1px solid #ECD3D3;
+    box-sizing: border-box;
+    border-radius: 7px;
+    height: 35px;
+}
+
+form#admin button{
+     width: 100%;
+     max-width: 900px;
+     text-align: center;
+     font-family: Roboto;
+     font-style: normal;
+     font-weight: 500;
+     font-size: 24px;
+     line-height: 28px;
+     color: #FFF9F9;
+     background-color: black;
+     cursor: pointer;
+}
+form#admin textarea{
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 7px;
+    height: 80px;
+    background: #FFF7F7;
+    border: 1px solid #ECD3D3;
+    box-sizing: border-box;
+    border-radius: 7px;
+    height: 35px;
+}

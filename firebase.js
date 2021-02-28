@@ -18,11 +18,16 @@ class Firebase{
   if (!app.apps.length) {      
     app.initializeApp(firebaseConfig);
   }   
+  //aqui acesso a database direto
   this.app = app.database();
 }
  login(email,senha){
    return app.auth().signInWithEmailAndPassword(email,senha);
   }
+
+  deslogar(){
+    return app.auth().signOut();
+  } 
 
   async cadastro(nome,senha,email){
   await app.auth().createUserWithEmailAndPassword(senha,email)
@@ -41,7 +46,16 @@ class Firebase{
   getCurrent(){
     return app.auth().currentUser && app.auth().currentUser.email;
   }
-
+  
+  async  getUser(callback){
+    //!singifica que negativo ou seja aqui estou verificando primeiro se não tem nada
+    if(!app.auth().currentUser){
+    return null;
+  }
+    const id = app.auth().currentUser.uid;
+    await app.database().ref('Usuarios').child(id)
+    .once('value').then(callback); 
+ }
 }
 
 export default new Firebase();
