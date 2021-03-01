@@ -1,11 +1,14 @@
 import app from 'firebase/app';
 import 'firebase/database';
 import 'firebase/auth';
+import 'firebase/storage';
 
 
 let firebaseConfig = {
     apiKey: "AIzaSyAhMDu2fkhx607Y-4aFfX7mrf9iJ81I00M",
     authDomain: "reactudemy-24d1f.firebaseapp.com",
+    //para driblar erro ao CORS coloca o link baseURL
+    baseURL: 'https://cors-anywhere.herokuapp.com/https://api.github.com/',
     databaseURL: "https://reactudemy-24d1f-default-rtdb.firebaseio.com",
     projectId: "reactudemy-24d1f",
     storageBucket: "reactudemy-24d1f.appspot.com",
@@ -20,6 +23,7 @@ class Firebase{
   }   
   //aqui acesso a database direto
   this.app = app.database();
+  this.storage = app.storage();
 }
  login(email,senha){
    return app.auth().signInWithEmailAndPassword(email,senha);
@@ -45,6 +49,10 @@ class Firebase{
   } 
   getCurrent(){
     return app.auth().currentUser && app.auth().currentUser.email;
+  }
+
+  getCurrentUid(){
+    return app.auth().currentUser && app.auth().currentUser.uid;
   }
   
   async  getUser(callback){

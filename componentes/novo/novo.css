@@ -52,6 +52,18 @@ form#admin input[type=text]{
     border-radius: 7px;
     height: 35px;
 }
+form#admin img{
+   width:200px;
+   height: 100px;
+   margin-bottom: 15px;
+}
+
+form#admin progress{
+    display: flex;
+    margin-bottom: 15px;
+    margin-top:10px;
+    width:100px;
+}
 
 form#admin button{
      width: 100%;
