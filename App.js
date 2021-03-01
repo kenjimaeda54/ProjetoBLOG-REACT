@@ -9,6 +9,7 @@ import Login    from "./componentes/login";
 import Admin    from "./componentes/admin";
 import Registro from "./componentes/registro";
 import Novo     from "./componentes/novo";
+import Footer   from "./componentes/footer";
 
 export default class App extends Component{
  
@@ -34,6 +35,7 @@ export default class App extends Component{
                   <Route exact path="/registro"   component={Registro}/>
                   <Route exact path="/admin/novo" component={Novo}/>
                 </Switch>
+                <Footer/>
               </BrowserRouter>
            </div>
            ):(

@@ -1,0 +1,28 @@
+footer#footer {
+    background-color: black; 
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+footer#footer .corpo{
+    display: flex;
+    color: white;
+    flex-direction: column; 
+}
+
+
+.corpo h3{
+    font-size: 14px;
+    color: white;
+}
+
+.corpo  a{
+    font-size:13px;
+    color: white;
+    text-decoration: none;
+}
+.corpo li{
+    list-style:none;
+}
